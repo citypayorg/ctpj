@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>ctpj-parent</artifactId>
-        <groupId>org.citypay</groupId>
-        <version>0.16.2</version>
+        <groupId>org.ctpj</groupId>
+        <version>0.16.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

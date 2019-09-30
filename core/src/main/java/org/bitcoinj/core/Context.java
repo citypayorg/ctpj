@@ -25,7 +25,7 @@ import org.bitcoinj.governance.VoteConfidenceTable;
 import org.bitcoinj.quorums.*;
 import org.bitcoinj.store.FlatDB;
 import org.bitcoinj.store.HashStore;
-import org.citypay.bls.BLS;
+import org.ctpj.bls.BLS;
 import org.slf4j.*;
 
 import java.util.EnumSet;
@@ -234,6 +234,11 @@ public class Context {
     }
 
     public void initCtp(boolean liteMode, boolean allowInstantX, @Nullable EnumSet<MasternodeSync.SYNC_FLAGS> syncFlags) {
+        initCtp(liteMode, allowInstantX, syncFlags, null);
+    }
+    public void initCtp(boolean liteMode, boolean allowInstantX, @Nullable EnumSet<MasternodeSync.SYNC_FLAGS> syncFlags,
+        @Nullable EnumSet<MasternodeSync.VERIFY_FLAGS> verifyFlags) {
+
         this.liteMode = liteMode;//liteMode; --TODO: currently only lite mode has been tested and works with 12.1
         this.allowInstantX = allowInstantX;
 
@@ -241,7 +246,7 @@ public class Context {
         sporkManager = new SporkManager(this);
 
         masternodePayments = new MasternodePayments(this);
-        masternodeSync = syncFlags != null ? new MasternodeSync(this, syncFlags) : new MasternodeSync(this);
+        masternodeSync = syncFlags != null ? new MasternodeSync(this, syncFlags, verifyFlags) : new MasternodeSync(this);
         activeMasternode = new ActiveMasternode(this);
         darkSendPool = new DarkSendPool(this);
         instantSend = new InstantSend(this);
@@ -308,10 +313,14 @@ public class Context {
                 //other functions
                 darkSendPool.startBackgroundProcessing();
 
-                if(!llmqBackgroundThread.isAlive()) {
-                    llmqBackgroundThread = new LLMQBackgroundThread(Context.this);
-                    llmqBackgroundThread.start();
+                if(masternodeSync.hasSyncFlag(MasternodeSync.SYNC_FLAGS.SYNC_INSTANTSENDLOCKS)) {
+                    if (!llmqBackgroundThread.isAlive()) {
+                        llmqBackgroundThread = new LLMQBackgroundThread(Context.this);
+                        llmqBackgroundThread.start();
+                    }
                 }
+
+                signingManager.initializeSignatureLog(directory);
 
             }
         }).start();
@@ -328,7 +337,8 @@ public class Context {
             signingManager.close();
             chainLockHandler.close();
             quorumManager.close();
-            llmqBackgroundThread.interrupt();
+            if(masternodeSync.hasSyncFlag(MasternodeSync.SYNC_FLAGS.SYNC_INSTANTSENDLOCKS))
+                llmqBackgroundThread.interrupt();
             blockChain.removeNewBestBlockListener(newBestBlockListener);
         }
     }

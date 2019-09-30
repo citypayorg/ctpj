@@ -8,9 +8,9 @@ import org.bitcoinj.params.UnitTestParams;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
 import org.bitcoinj.wallet.*;
-import org.citypay.bls.ExtendedPrivateKey;
-import org.citypay.bls.JNI;
-import org.citypay.bls.PrivateKey;
+import org.ctpj.bls.ExtendedPrivateKey;
+import org.ctpj.bls.JNI;
+import org.ctpj.bls.PrivateKey;
 import org.junit.Before;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Base64;
@@ -169,7 +169,7 @@ public class ProviderTests {
 
         Script scriptPayout = ScriptBuilder.createOutputScript(Address.fromBase58(PARAMS, payoutAddress));
 
-        MasternodeAddress ipAddress = new MasternodeAddress(InetAddress.getByName("1.2.5.6"), 19999);
+        MasternodeAddress ipAddress = new MasternodeAddress(InetAddress.getByName("1.2.5.6"), 29999);
 
         Script inputScript = ScriptBuilder.createOutputScript(Address.fromBase58(PARAMS, inputAddress0));
 
@@ -252,7 +252,7 @@ public class ProviderTests {
 
         Script scriptPayout = ScriptBuilder.createOutputScript(Address.fromBase58(PARAMS, payoutAddress));
 
-        MasternodeAddress ipAddress = new MasternodeAddress(InetAddress.getByName("1.1.1.1"), 19999);
+        MasternodeAddress ipAddress = new MasternodeAddress(InetAddress.getByName("1.1.1.1"), 29999);
 
         Transaction calcInputsHashTx = new Transaction(PARAMS);
         calcInputsHashTx.addInput(new TransactionInput(PARAMS, null, new byte[0], input0));

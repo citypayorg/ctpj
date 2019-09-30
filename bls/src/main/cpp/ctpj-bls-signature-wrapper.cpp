@@ -690,7 +690,7 @@ SWIGEXPORT void JNICALL Java_org_ctpj_bls_JNI_BLS_1SetContextError(JNIEnv *jenv,
   core_get()->code = error;
 }
 
-std::string CTPJ_VERSION = "0.16.2";
+std::string CTPJ_VERSION = "0.16.3";
 
 SWIGEXPORT jstring JNICALL Java_org_ctpj_bls_JNI_BLS_1GetVersionString(JNIEnv *jenv, jclass jcls) {
   (void)jenv;

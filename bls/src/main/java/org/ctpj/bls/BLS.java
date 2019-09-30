@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.citypay.bls;
+package org.ctpj.bls;
 
 import com.google.common.base.Preconditions;
 
@@ -25,7 +25,7 @@ public class BLS {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  public static final String CTPJ_VERSION = "0.16.2";
+  public static final String CTPJ_VERSION = "0.16.3";
 
 
   static {

@@ -4,9 +4,9 @@ import org.bitcoinj.core.Context;
 import org.bitcoinj.core.KeyId;
 import org.bitcoinj.crypto.*;
 import org.bitcoinj.params.UnitTestParams;
-import org.citypay.bls.ExtendedPrivateKey;
-import org.citypay.bls.JNI;
-import org.citypay.bls.PrivateKey;
+import org.ctpj.bls.ExtendedPrivateKey;
+import org.ctpj.bls.JNI;
+import org.ctpj.bls.PrivateKey;
 import org.junit.Before;
 import org.junit.Test;
 

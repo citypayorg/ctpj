@@ -4,7 +4,7 @@ import com.google.common.base.Preconditions;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.ProtocolException;
 import org.bitcoinj.core.Sha256Hash;
-import org.citypay.bls.*;
+import org.ctpj.bls.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -111,9 +111,8 @@ public class BLSSignature extends BLSAbstractObject {
         try {
             return signatureImpl.Verify(hash.getBytes(), pubKey.publicKeyImpl);
         } catch (Exception x) {
-            log.error("verification error" + x.getMessage());
-            throw new RuntimeException(x);
-            //\return false;
+            log.error("signature verification error: ", x);
+            return false;
         }
     }
 
@@ -140,6 +139,7 @@ public class BLSSignature extends BLSAbstractObject {
         try {
             return signatureImpl.Verify(hashes2, pubKeyVec);
         } catch (Exception x) {
+            log.error("signature verification error: ", x);
             return false;
         }
     }

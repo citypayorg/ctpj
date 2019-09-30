@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.citypay.bls;
+package org.ctpj.bls;
 
 import com.google.common.base.Preconditions;
 

@@ -1,4 +1,4 @@
-package org.citypay.bls;
+package org.ctpj.bls;
 
 /**
  * Created by hashengineering on 11/13/18.

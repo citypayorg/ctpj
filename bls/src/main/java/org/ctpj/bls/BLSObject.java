@@ -15,7 +15,7 @@
  *
  */
 
-package org.citypay.bls;
+package org.ctpj.bls;
 
 import com.google.common.base.Preconditions;
 

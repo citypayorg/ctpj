@@ -1,4 +1,4 @@
-package org.citypay.bls;
+package org.ctpj.bls;
 
 import com.google.common.io.BaseEncoding;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 
-import static org.citypay.bls.BLS.STS_OK;
+import static org.ctpj.bls.BLS.STS_OK;
 import static org.junit.Assert.*;
 
 public class BlsSignatureTest extends BaseTest {
