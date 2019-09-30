@@ -17,7 +17,7 @@
  * Version 3.0.12
  */
 
-package org.ctpj.bls;
+package org.citypay.bls;
 
 public class SWIGTYPE_p_bn_t {
   private transient long swigCPtr;

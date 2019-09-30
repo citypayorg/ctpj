@@ -1,4 +1,4 @@
-package org.ctpj.bls;
+package org.citypay.bls;
 
 import com.google.common.io.BaseEncoding;
 

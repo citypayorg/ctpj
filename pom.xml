@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.ctpj</groupId>
+  <groupId>org.citypay</groupId>
   <artifactId>ctpj-parent</artifactId>
   <version>0.16.2</version>
   <packaging>pom</packaging>
@@ -23,8 +23,8 @@
 
 
   <scm>
-    <connection>scm:git:https://github.com/HashEngineering/darkcoinj</connection>
-    <developerConnection>scm:git:https://github.com/HashEngineering/darkcoinj</developerConnection>
+    <connection>scm:git:https://github.com/citypayorg/darkcoinj</connection>
+    <developerConnection>scm:git:https://github.com/citypayorg/darkcoinj</developerConnection>
     <url>scm:git:https://github.com/bitcoinj/darkcoinj</url>
   </scm>
 
@@ -43,7 +43,7 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/HashEngineering/ctpj/issues</url>
+    <url>https://github.com/citypayorg/ctpj/issues</url>
   </issueManagement>
 
   <mailingLists>
@@ -58,7 +58,7 @@
     <repository>
       <id>central</id>
       <name>ctp-Ctpj</name>
-      <url>https://api.bintray.com/maven/ctp/Ctpj/org.ctpj/;publish=1</url>
+      <url>https://api.bintray.com/maven/ctp/Ctpj/org.citypay/;publish=1</url>
     </repository>
 
     <snapshotRepository>

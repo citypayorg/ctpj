@@ -2,8 +2,8 @@ package org.bitcoinj.crypto;
 
 import com.google.common.base.Preconditions;
 import org.bitcoinj.core.*;
-import org.ctpj.bls.BLSObject;
-import org.ctpj.bls.JNI;
+import org.citypay.bls.BLSObject;
+import org.citypay.bls.JNI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

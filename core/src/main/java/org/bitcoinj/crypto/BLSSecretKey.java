@@ -3,8 +3,8 @@ package org.bitcoinj.crypto;
 import com.google.common.base.Preconditions;
 import org.bitcoinj.core.ProtocolException;
 import org.bitcoinj.core.Sha256Hash;
-import org.ctpj.bls.PrivateKey;
-import org.ctpj.bls.PrivateKeyVector;
+import org.citypay.bls.PrivateKey;
+import org.citypay.bls.PrivateKeyVector;
 
 import java.util.ArrayList;
 

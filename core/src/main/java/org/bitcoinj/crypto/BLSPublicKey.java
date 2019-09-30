@@ -3,9 +3,9 @@ package org.bitcoinj.crypto;
 import com.google.common.base.Preconditions;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.ProtocolException;
-import org.ctpj.bls.BLS;
-import org.ctpj.bls.PublicKey;
-import org.ctpj.bls.PublicKeyVector;
+import org.citypay.bls.BLS;
+import org.citypay.bls.PublicKey;
+import org.citypay.bls.PublicKeyVector;
 
 import java.io.IOException;
 import java.io.OutputStream;
