@@ -4,7 +4,7 @@ import com.google.common.base.Preconditions;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.ProtocolException;
 import org.bitcoinj.core.Sha256Hash;
-import org.ctpj.bls.*;
+import org.citypay.ctpj.bls.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

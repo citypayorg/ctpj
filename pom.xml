@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.ctpj</groupId>
+  <groupId>org.citypay.ctpj</groupId>
   <artifactId>ctpj-parent</artifactId>
   <version>0.16.3</version>
   <packaging>pom</packaging>
@@ -58,7 +58,7 @@
     <repository>
       <id>central</id>
       <name>ctp-Ctpj</name>
-      <url>https://api.bintray.com/maven/ctp/Ctpj/org.ctpj/;publish=1</url>
+      <url>https://api.bintray.com/maven/ctp/Ctpj/org.citypay.ctpj/;publish=1</url>
     </repository>
 
     <snapshotRepository>
